@@ -1,68 +1,54 @@
 ﻿using System;
 
-namespace CS_Intro1
+namespace Class
 {
-    class Program //this our main class
+    class Program
+    {
+        public class Animal
+        {
+            public string Name, breed;
 
-    {   
+
+            public void Greeting()
+            {
+                Console.WriteLine("woof, my name is " + Name + " and my breed is " + breed);
+            }
+
+        }
+        public class Cat
+        {
+            public string Name;
+            public bool SixorNot;
+
+            public void Greeting2()
+            {
+                Console.WriteLine("meow, my name is" + Name + " and I am not a six toed cat");
+            }
+        }
         static void Main(string[] args)
+        {
+            Animal animal = new Animal();
+            animal.Name = "Sonny";
+            animal.breed = "German Shepard";
 
-        {    
-            Console.WriteLine ("what time is bed time?");
+            animal.Greeting();
 
-            //string variable
-            string sleepy = "what time is bed time?";
-            string hour = "NOT FOR FOUR MORE HOURS";
-            string sad = " i wish i was dreaming";
-
-
-            //numbers variable
-            int number1 = 10;
-            float time1 = 10.00F;
-            float time8 = 11.00F;
-            double time2 = 10.3333;
-
-            //boolean variable
-            bool boolean = true;
-            Console.WriteLine(sleepy);
-            Console.WriteLine(time1);
-            Console.WriteLine(time2);
-            Console.WriteLine(boolean);
-
-            //concatanate
-            
-            string concate1 = sleepy + hour + time1 + sad;
-            Console.WriteLine(concate1);
-
-            //multiply variable
-            float multiply = time1 * time8;
-            Console.WriteLine(multiply);
+            Cat cat = new Cat();
+            cat.Name = " felix";
 
 
-            //constant
-            const int years = 100;
-            const int ages = 500;
-            Console.WriteLine(years);
-            Console.WriteLine(ages);
+            cat.Greeting2();
 
-            //interpolate 
-            string interpolate=  (sad + hour);
-            Console.WriteLine(interpolate);
+            int num = 5;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            if (num == 6)
+            {
+                Console.WriteLine("felix has six toes");
+            }
+            else if (num == 5)
+            {
+                Console.WriteLine("felix has five toes");
+            }
         }
     }
 }
